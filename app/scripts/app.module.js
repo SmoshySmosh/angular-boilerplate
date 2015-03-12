@@ -11,4 +11,5 @@
 angular
   .module('ngBoilerplateApp', [
     'ngBoilerplateApp.core',
+    'ngBoilerplateApp.main'
   ]);

@@ -9,8 +9,8 @@ function AppConfig ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('', '/');
     $stateProvider
         .state('app', {
-            url: '/',
-            templateUrl: 'views/main.html',
+            url: '',
+            templateUrl: 'views/layout.html',
             controller: 'MainCtrl'
         });
 }

@@ -32,7 +32,9 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
-      'app/scripts/**/*.js',
+      'app/scripts/**/*.module.js',
+      'app/scripts/**/*.config.js',
+      'app/scripts/**/*.controller.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
@@ -68,7 +70,7 @@ module.exports = function(config) {
     preprocessors: {
         'app/scripts/**/*.js': ['coverage']
     },
-    
+
     // Coverage Reporters
     coverageReporter: {
         reporters: [
@@ -82,7 +84,7 @@ module.exports = function(config) {
 	    }
 	]
     },
-   
+
     // Reporters
     reporters: [
         'spec',
