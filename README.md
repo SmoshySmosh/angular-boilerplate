@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/SmoshySmosh/angular-boilerplate.svg)](https://travis-ci.org/SmoshySmosh/angular-boilerplate)
 # ng-boilerplate
 
 ## Prerequisites
