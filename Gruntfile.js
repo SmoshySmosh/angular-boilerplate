@@ -1,4 +1,3 @@
-// Generated on 2015-03-11 using generator-angular 0.11.1
 'use strict';
 
 // # Globbing
@@ -480,7 +479,6 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
     'cssmin',
     'uglify',
     'filerev',
