@@ -4,6 +4,6 @@ node_js:
 before_script:
   - 'npm install -g bower grunt-cli'
   - 'bower install'
-  - 'gem install sass'
-  - 'gem install compass'
+  - 'sudo gem install sass'
+  - 'sudo gem install compass'
   - 'grunt'
