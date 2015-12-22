@@ -13,7 +13,7 @@
         .controller('LayoutController', LayoutController);
 
     /* @ngInject */
-    function LayoutController () {
+    function LayoutController (layout) {
         var vm = this;
     }
 })();

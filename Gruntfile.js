@@ -17,8 +17,10 @@
 
         // Configurable paths for the application
         var appConfig = {
-            app: require('./bower.json').appPath || 'app',
-            dist: 'dist'
+            name: 'ngBoilerplateApp',
+            app:  require('./bower.json').appPath || 'app',
+            dist: 'dist',
+            env:  grunt.option('env') || 'development'
         };
 
         // Define the configuration for all the tasks
@@ -461,7 +463,7 @@
                     src: ['{,*/}*.html'],
                     dest: '<%= yeoman.app %>/scripts/app.templates.js',
                     options: {
-                        module: 'ngBoilerplateApp',
+                        module: appConfig.name,
                         htmlmin: {
                             collapseWhitespace: true,
                             conservativeCollapse: true,
@@ -471,6 +473,22 @@
                             removeOptionalTags: true,
                             keepClosingSlash: true
                         }
+                    }
+                }
+            },
+
+            // NG Constants
+            ngconstant: {
+                options: {
+                    name: appConfig.name + '.config',
+                    dest: '<%= yeoman.app %>/scripts/config/config.constant.js',
+                    deps: false,
+                    template: grunt.file.read('config/config.tpl.ejs'),
+
+                },
+                dist: {
+                    constants: {
+                        config: grunt.file.readJSON('config/' + appConfig.env + '.json')
                     }
                 }
             }
@@ -483,6 +501,7 @@
             }
 
             grunt.task.run([
+                'ngconstant:dist',
                 'clean:server',
                 'wiredep',
                 'concurrent:server',
@@ -511,6 +530,7 @@
         ]);
 
         grunt.registerTask('build', [
+            'ngconstant:dist',
             'clean:dist',
             'wiredep',
             'useminPrepare',

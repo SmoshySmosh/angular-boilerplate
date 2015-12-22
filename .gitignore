@@ -1,8 +1,15 @@
+/* Application Configuraiton */
+app/scripts/config/config.constant.js
+app/scripts/app.templates.js
+node_modules
 .tmp
 .sass-cache
-.DS_STORE
-node_modules
-dist
 bower_components
-docs
 test/coverage
+docs
+
+/* Live Applicaton Build */
+dist
+
+/* Protractor - E2E testing w/Selenium. */
+test/screenshots/*
