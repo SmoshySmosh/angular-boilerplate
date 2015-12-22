@@ -5,15 +5,14 @@
         .module('ngBoilerplateApp.main')
         .config(MainConfig);
 
-    MainConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
-
+    /* @ngInject */
     function MainConfig ($stateProvider, $urlRouterProvider) {
         // For any unmatched url, redirect to /
         $urlRouterProvider.when('', '/');
         $stateProvider
             .state('app.main', {
                 url: '/',
-                templateUrl: 'views/main.html',
+                templateUrl: 'main/main.html',
                 controller: 'MainController as mc'
             });
     }

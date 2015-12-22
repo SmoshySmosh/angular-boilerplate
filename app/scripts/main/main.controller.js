@@ -12,13 +12,9 @@
         .module('ngBoilerplateApp.main')
         .controller('MainController', MainController);
 
-    MainController.$inject = ['$scope'];
+    MainController.$inject = [];
 
-    function MainController ($scope) {
-        $scope.awesomeThings = [
-          'HTML5 Boilerplate',
-          'AngularJS',
-          'Karma'
-        ];
+    function MainController () {
+        var vm = this;
     }
 })();

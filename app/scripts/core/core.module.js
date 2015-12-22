@@ -20,7 +20,6 @@
                 'ngMessages',
                 'ngResource',
                 'ngSanitize',
-                'ngTouch',
                 'ui.router'
             ]
         );
