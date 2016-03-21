@@ -9,11 +9,12 @@ describe('Main Page', function () {
     });
 
     afterEach(function () {
-        var currentSpec = jasmine.getEnv().currentSpec;
-        var passed = currentSpec.results().passed();
-        if (!passed) {
-            screenshot.takeScreenshotOnFailure(currentSpec);
-        };
+        // var currentSpec = jasmine.getEnv().currentSpec;
+        // console.log(jasmine);
+        // var passed = currentSpec.results().passed();
+        // if (!passed) {
+        //     screenshot.takeScreenshotOnFailure(currentSpec);
+        // };
     });
 
     describe('Basics: ', function () {
