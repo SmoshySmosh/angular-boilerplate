@@ -14,6 +14,8 @@
             'ngBoilerplateApp',
             [
                 'ngBoilerplateApp.core',
+                'ngBoilerplateApp.config',
+                'ngBoilerplateApp.layout',
                 'ngBoilerplateApp.main'
             ]
         );

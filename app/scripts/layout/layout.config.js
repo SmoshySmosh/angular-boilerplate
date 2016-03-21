@@ -2,19 +2,18 @@
     'use strict';
 
     angular
-        .module('ngBoilerplateApp')
+        .module('ngBoilerplateApp.layout')
         .config(AppConfig);
 
-    AppConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
-
+    /* @ngInject */
     function AppConfig ($stateProvider, $urlRouterProvider) {
         // For any unmatched url, redirect to /
         $urlRouterProvider.when('', '/');
         $stateProvider
             .state('app', {
                 url: '',
-                templateUrl: 'views/layout.html',
-                controller: 'MainController as mc'
+                templateUrl: 'layout/layout.html',
+                controller: 'LayoutController as lc'
             });
     }
 })();

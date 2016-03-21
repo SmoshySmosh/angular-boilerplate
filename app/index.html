@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="no-js" ng-app="ngBoilerplateApp">
+<html class="no-js" ng-app="ngBoilerplateApp" strict-di>
     <head>
         <meta charset="utf-8">
-        <title>ngBoilerplate</title>
+        <title ng-bind="page.title"></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -34,10 +34,21 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <!-- App Module -->
         <script src="scripts/app.module.js"></script>
-        <script src="scripts/app.config.js"></script>
+        <script src="scripts/app.templates.js"></script>
 
         <!-- Core Module -->
         <script src="scripts/core/core.module.js"></script>
+
+        <!-- Config Module -->
+        <script src="scripts/config/config.module.js"></script>
+        <script src="scripts/config/config.config.js"></script>
+        <script src="scripts/config/config.constant.js"></script>
+
+        <!-- Layout Module -->
+        <script src="scripts/layout/layout.module.js"></script>
+        <script src="scripts/layout/layout.config.js"></script>
+        <script src="scripts/layout/layout.controller.js"></script>
+        <script src="scripts/layout/layout.factory.js"></script>
 
         <!-- Core Module -->
         <script src="scripts/main/main.module.js"></script>
