@@ -15,6 +15,9 @@
         // Time how long tasks take. Can help when optimizing build times
         require('time-grunt')(grunt);
 
+        // Assign Serve-Static
+        var serveStatic = require('serve-static');
+
         // Configurable paths for the application
         var appConfig = {
             name: 'ngBoilerplateApp',
@@ -82,16 +85,16 @@
                         open: true,
                         middleware: function(connect) {
                             return [
-                                connect.static('.tmp'),
+                                serveStatic('.tmp'),
                                 connect().use(
                                     '/bower_components',
-                                    connect.static('./bower_components')
+                                    serveStatic('./bower_components')
                                 ),
                                 connect().use(
                                     '/app/styles',
-                                    connect.static('./app/styles')
+                                    serveStatic('./app/styles')
                                 ),
-                                connect.static(appConfig.app)
+                                serveStatic(appConfig.app)
                             ];
                         }
                     }
@@ -101,13 +104,13 @@
                         port: 9001,
                         middleware: function(connect) {
                             return [
-                                connect.static('.tmp'),
-                                connect.static('test'),
+                                serveStatic('.tmp'),
+                                serveStatic('test'),
                                 connect().use(
                                     '/bower_components',
-                                    connect.static('./bower_components')
+                                    serveStatic('./bower_components')
                                 ),
-                                connect.static(appConfig.app)
+                                serveStatic(appConfig.app)
                             ];
                         }
                     }
